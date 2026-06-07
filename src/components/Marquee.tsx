@@ -1,4 +1,3 @@
-import React from 'react';
 import { Star, Stethoscope, Diamond, Award, Heart } from 'lucide-react';
 
 const Marquee = () => {
