@@ -27,7 +27,7 @@ const About = () => {
             {/* Experience Badge */}
             <div className="absolute -right-4 md:-right-8 top-1/2 -translate-y-1/2 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 hidden sm:block">
               <div className="text-center">
-                <span className="block text-3xl font-extrabold text-primary">10+</span>
+                <span className="block text-3xl font-extrabold text-primary">7+</span>
                 <span className="block text-sm font-medium text-slate-500">Years of<br/>Experience</span>
               </div>
             </div>

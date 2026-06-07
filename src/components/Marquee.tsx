@@ -3,7 +3,7 @@ import { Star, Stethoscope, Diamond, Award, Heart } from 'lucide-react';
 
 const Marquee = () => {
   const items = [
-    { text: "10+ Years Experience", Icon: Star },
+    { text: "7+ Years Experience", Icon: Star },
     { text: "Painless Root Canal", Icon: Stethoscope },
     { text: "Premium Oral Jewellery", Icon: Diamond },
     { text: "ISO Certified Clinic", Icon: Award },
