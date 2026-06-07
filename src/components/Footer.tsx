@@ -102,15 +102,21 @@ const Footer = () => {
 
         </div>
 
-        <div className="pt-8 border-t border-slate-700 flex flex-col md:flex-row items-center justify-between text-center w-full mt-8 gap-4">
-          <p className="text-sm text-slate-500">
+        <div className="flex flex-col md:flex-row items-center justify-between w-full mt-8 pt-8 border-t border-slate-700/50 text-sm">
+          <div className="text-slate-400 mb-2 md:mb-0">
             &copy; 2026 Nidhi Dental Clinic. All rights reserved.
-          </p>
-          <div className="flex gap-4 text-sm text-slate-500 items-center">
-            Built by&nbsp;
-            <span className="animate-pulse font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 tracking-widest text-lg drop-shadow-[0_0_8px_rgba(56,189,248,0.8)] uppercase">
-              R-Labs
-            </span>
+          </div>
+          <div className="flex items-center text-slate-400">
+            <span className="hidden md:block mx-2 text-slate-500">•</span>
+            <p className="text-sm font-medium flex items-center gap-1.5">
+              Built by
+              <span className="relative group cursor-pointer ml-1">
+                <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 tracking-wider transition-all duration-300 group-hover:from-blue-500 group-hover:to-indigo-500">
+                  R-Labs
+                </span>
+                <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-blue-600 to-indigo-600 transition-all duration-300 group-hover:w-full rounded-full"></span>
+              </span>
+            </p>
           </div>
         </div>
       </div>
