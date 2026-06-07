@@ -17,8 +17,8 @@ const Contact = () => {
     e.preventDefault();
     
     // Dynamic WhatsApp Logic
-    const message = `Hello Dr. Nidhi, I would like to book an appointment.%0A%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}%0A*Date:* ${formData.date}%0A*Slot:* ${formData.slot}`;
-    const whatsappUrl = `https://wa.me/917016193194?text=${message}`;
+    const message = `🏥 *New Appointment Request*\n\nHello Dr. Nidhi, I would like to book a dental appointment.\n\n👤 *Name:* ${formData.name}\n📱 *Phone:* ${formData.phone}\n📅 *Date:* ${formData.date}\n⏰ *Slot:* ${formData.slot}\n\nPlease confirm my availability. Thank you!`;
+    const whatsappUrl = `https://wa.me/917016193194?text=${encodeURIComponent(message)}`;
     
     window.open(whatsappUrl, '_blank');
   };
