@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Calendar, Phone } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -86,49 +86,40 @@ const Navbar = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
+          <div className="md:hidden flex items-center z-50 relative">
             <button
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-slate-600 hover:text-primary focus:outline-none p-2"
             >
-              {isOpen ? <X size={28} /> : <Menu size={28} />}
+              {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
           </div>
         </div>
       </div>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden glass border-t border-slate-100"
+      <div className={`${isMenuOpen ? 'block' : 'hidden'} absolute top-full left-0 w-full bg-white shadow-xl z-50 md:hidden border-t border-slate-100`}>
+        <div className="px-4 pt-2 pb-6 space-y-2">
+          {links.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              onClick={() => setIsMenuOpen(false)}
+              className="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-primary hover:bg-primary-light/30 transition-colors"
+            >
+              {link.name}
+            </a>
+          ))}
+          <a
+            href="#contact"
+            onClick={() => setIsMenuOpen(false)}
+            className="mt-4 flex items-center justify-center gap-2 w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-5 rounded-full shadow-md transition-all"
           >
-            <div className="px-4 pt-2 pb-6 space-y-2">
-              {links.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-primary hover:bg-primary-light/30 transition-colors"
-                >
-                  {link.name}
-                </a>
-              ))}
-              <a
-                href="#contact"
-                onClick={() => setIsOpen(false)}
-                className="mt-4 flex items-center justify-center gap-2 w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-5 rounded-full shadow-md transition-all"
-              >
-                <Calendar size={18} />
-                <span>Book Appointment</span>
-              </a>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            <Calendar size={18} />
+            <span>Book Appointment</span>
+          </a>
+        </div>
+      </div>
       </nav>
     </header>
   );
