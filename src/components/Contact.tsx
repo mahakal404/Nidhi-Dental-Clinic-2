@@ -56,11 +56,11 @@ const Contact = () => {
                   <MapPin size={20} className="text-primary-light mt-1 shrink-0" />
                   <div>
                     <h5 className="font-semibold text-white mb-1">Clinic Location</h5>
-                    <p className="text-slate-300 text-sm leading-relaxed">
+                    <a href="https://maps.google.com/?q=Nidhi+Dental+Clinic,Killa-Pardi,Valsad,Gujarat" target="_blank" rel="noopener noreferrer" className="text-slate-300 text-sm leading-relaxed hover:text-white transition-colors block">
                       2nd Floor, Shop No. 222-223,<br />
                       Rudra Arcade, Damani Zapa,<br />
                       Killa-Pardi, Valsad, Gujarat 396125
-                    </p>
+                    </a>
                   </div>
                 </div>
 
@@ -68,10 +68,10 @@ const Contact = () => {
                   <Phone size={20} className="text-primary-light mt-1 shrink-0" />
                   <div>
                     <h5 className="font-semibold text-white mb-1">Phone Numbers</h5>
-                    <p className="text-slate-300 text-sm">
-                      +91 70161 93194<br />
-                      +91 97129 39196
-                    </p>
+                    <div className="text-slate-300 text-sm flex flex-col gap-1">
+                      <a href="tel:+917016193194" className="hover:text-white transition-colors">+91 70161 93194</a>
+                      <a href="tel:+919712939196" className="hover:text-white transition-colors">+91 97129 39196</a>
+                    </div>
                   </div>
                 </div>
 
@@ -79,7 +79,7 @@ const Contact = () => {
                   <Mail size={20} className="text-primary-light shrink-0" />
                   <div>
                     <h5 className="font-semibold text-white mb-1">Email Address</h5>
-                    <p className="text-slate-300 text-sm break-all">drnidhimaisuriamistry@gmail.com</p>
+                    <a href="mailto:drnidhimaisuriamistry@gmail.com" className="text-slate-300 text-sm break-all hover:text-white transition-colors block">drnidhimaisuriamistry@gmail.com</a>
                   </div>
                 </div>
 
