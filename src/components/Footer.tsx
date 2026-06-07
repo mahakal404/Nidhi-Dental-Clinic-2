@@ -24,7 +24,7 @@ const Footer = () => {
               <a href="https://instagram.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-slate-800 text-slate-300 flex items-center justify-center hover:bg-gradient-to-tr hover:from-orange-500 hover:via-pink-500 hover:to-purple-600 hover:text-white hover:scale-110 hover:shadow-lg transition-all duration-300" aria-label="Instagram">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-slate-800 text-slate-300 flex items-center justify-center hover:bg-[#1877F2] hover:text-white hover:scale-110 hover:shadow-lg transition-all duration-300" aria-label="Facebook">
+              <a href="https://www.facebook.com/nidhidentalclinic/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-slate-800 text-slate-300 flex items-center justify-center hover:bg-[#1877F2] hover:text-white hover:scale-110 hover:shadow-lg transition-all duration-300" aria-label="Facebook">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
               </a>
             </div>
@@ -56,9 +56,9 @@ const Footer = () => {
             <h4 className="text-white font-bold text-lg mb-6">Verified Profiles</h4>
             <ul className="space-y-3">
               {[
-                { name: 'Practo Profile', href: '#' },
-                { name: 'Justdial Listing', href: '#' },
-                { name: 'DocIndia Directory', href: '#' }
+                { name: 'Practo Profile', href: 'https://www.practo.com/valsad/doctor/dr-nidhi-maisuria-mistry-dentist' },
+                { name: 'Justdial Listing', href: 'https://www.justdial.com/Vapi/Nidhi-Dental-Clinic-2Nd-Floor-Shop-No222-223-Killapardi-Valsad/9999P2632-2632-201204182037-S9C4_BZDET' },
+                { name: 'DocIndia Directory', href: 'https://www.docindia.org/doctors/valsad/dr-nidhi-maisuria-mistry-dental-surgery' }
               ].map((link) => (
                 <li key={link.name}>
                   <a href={link.href} target="_blank" rel="noopener noreferrer" className="text-sm hover:text-blue-500 transition-colors flex items-center gap-2 group">
